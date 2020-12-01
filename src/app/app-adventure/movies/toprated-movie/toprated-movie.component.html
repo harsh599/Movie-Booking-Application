@@ -1,0 +1,9 @@
+  <div *ngIf="movie" class="card">
+    <strong>{{movie.title}}</strong>
+    &nbsp; &nbsp;<span>Rating:{{movie.vote_average ? movie.vote_average : 0}}/10</span>
+    <div>{{movie.overview}}</div>
+    <div>Release Date:{{movie.release_date}}</div>
+    <div>Language:{{movie.original_language ? (movie.original_language | uppercase) : 'NA'}}</div>
+  </div>
+  <br>
+  <br>

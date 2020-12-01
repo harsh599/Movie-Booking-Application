@@ -1,0 +1,21 @@
+<div>
+  <div>
+    <h1>Top Rated Movies!!</h1>
+  </div>
+  <div *ngIf = "allMovies && allMovies.length > 0">
+    <ng-container *ngFor = "let movies of allMovies" class = "topMovie">
+    <app-toprated-movie [movie] = "movies"></app-toprated-movie>
+    </ng-container>
+  </div>
+
+  <div>
+    <h1>Upcoming Movies!!</h1>
+    <p>Movies between {{startDate ? startDate : ''}} and {{endDate ? endDate  : ''}}</p>
+  </div>
+
+  <div *ngIf = "allUpcomingMovies && allUpcomingMovies.length > 0">
+    <ng-container *ngFor = "let movies of allUpcomingMovies">
+    <app-toprated-movie [movie] = "movies"></app-toprated-movie>
+    </ng-container>
+  </div>
+</div>
